@@ -58,8 +58,10 @@ VELOCITY_NOISE = 0.2
 DT = 0.001
 
 #output files
-CSV_FILE     = r"C:\Users\ryou1\OneDrive\Desktop\throw_log_3d.csv"
-SUMMARY_FILE = r"C:\Users\ryou1\OneDrive\Desktop\trial_summary_3d.csv"
+desktop = os.path.join(os.path.expanduser("~"), "Desktop")
+os.makedirs(desktop, exist_ok=True)
+CSV_FILE     = os.path.join(desktop, "throw_log_3d.csv")
+SUMMARY_FILE = os.path.join(desktop, "trial_summary_3d.csv")
 
 
 class ControllerState:
